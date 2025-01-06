@@ -11,6 +11,7 @@ public:
     void insert(const std::string &word);
     void erase(const std::string &word);
     bool search(const std::string &word);
+    bool startsWith(const std::string &prefix); // 查找前缀
     void reconstruct();
 
 private:

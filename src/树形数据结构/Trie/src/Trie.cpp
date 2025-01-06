@@ -68,6 +68,18 @@ bool Trie::search(const std::string &word) {
         return false;
 }
 
+bool Trie::startsWith(const std::string &prefix) {
+    TrieNode *node = root;
+    for (char ch : prefix) {
+        auto it = node->children.find(ch);
+        if (it != node->children.end())
+            node = it->second;
+        else
+            return false;
+    }
+    return true;
+}
+
 void Trie::reconstruct() {
     delete root;
     root = new TrieNode();
