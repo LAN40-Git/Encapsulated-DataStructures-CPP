@@ -14,5 +14,10 @@ int main() {
         std::cout << "Delete word：app!" << std::endl;
     if (trie.search("apple"))
         std::cout << "Find word：apple!" << std::endl;
+    if (trie.startsWith("app"))
+        std::cout << "Find prefix：app!" << std::endl;
+    trie.reconstruct();
+    if (!trie.search("apple"))
+        std::cout << "Delete word：apple!" << std::endl;
     return 0;
 }

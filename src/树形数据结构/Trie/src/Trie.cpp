@@ -84,3 +84,5 @@ void Trie::reconstruct() {
     delete root;
     root = new TrieNode();
 }
+
+
